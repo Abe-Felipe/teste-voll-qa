@@ -8,8 +8,12 @@ class   mainPage{
         return selectors
     }
 
-    clickConta(){
-        cy.get(this.selectorsList().contaBancaria)
+    clickCB1() {
+        cy.get(this.selectorsList().contaBancaria).eq(0).click()
+    }
+    
+    checkCB1() {
+        cy.contains('João Silva').should('be.visible')
     }
 
 }
